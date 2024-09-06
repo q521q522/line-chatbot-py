@@ -1,5 +1,4 @@
 from flask import Flask, request, abort
-from urllib.parse import quote as url_quote
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import *
@@ -7,7 +6,9 @@ import os
 
 app = Flask(__name__)
 
+#line_bot_api = 'oTDLJU6SuW1G1t1H9xyp1ZNiD3KbZ8RjR089SsBI2AcKmr8YMHUZQR1OF+h5xQnoHRBt0t5Li6/i6CL1V2Kq9DfWzy1zmE0Lf1Wi59CxxiANJA6C24bWd4cxt1kNr6VQZ1a2opNlfRH5laUdAaBW7QdB04t89/1O/w1cDnyilFU='
 line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
+#handler = WebhookHandler('745df55dba827e8148615aabfaeca14d')
 handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
 
 
