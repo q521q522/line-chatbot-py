@@ -1,4 +1,5 @@
 from flask import Flask, request, abort
+from urllib.parse import quote as url_quote
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import *
